@@ -32,6 +32,11 @@ public class SpaceInvaderView extends View {
 	private static final int TARGET_HEIGHT = 800;
 	private static final int TARGET_WIDTH = 600;
 
+	private Bitmap alien;
+	
+	
+	
+	
 	private Paint paint; // Style pour le texte	
 	private String text; // texte à afficher
 
@@ -62,6 +67,7 @@ public class SpaceInvaderView extends View {
 		paint.setTextSize(36);
 		paint.setTextAlign(Paint.Align.CENTER);
 		text = "Texte";
+		alien =loadImage(R.drawable.alien1);
 	}
 
 
@@ -116,12 +122,12 @@ private void SpaceInvaderView() {
 }
 	 */
 
-	public loadImage (int res) {
+	public Bitmap loadImage (int res) {
 
 
 		Drawable drawable = this.getContext().getResources().getDrawable(res);
-		int x;
-		int y;
+		int x=drawable.getIntrinsicWidth();
+		int y=drawable.getIntrinsicHeight();
 		Bitmap bitmap = Bitmap.createBitmap(x, y, Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(bitmap);
 		drawable.setBounds(0, 0, x, y);
