@@ -118,14 +118,14 @@ private void SpaceInvaderView() {
 
 	public loadImage (int res) {
 
+
+		Drawable drawable = this.getContext().getResources().getDrawable(res);
 		int x;
 		int y;
-
-		Resources r = this.getContext().getResources().getDrawable(R.drawable.redstar);
 		Bitmap bitmap = Bitmap.createBitmap(x, y, Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(bitmap);
-		tile.setBounds(0, 0, x, y);
-		tile.draw(canvas);
+		drawable.setBounds(0, 0, x, y);
+		drawable.draw(canvas);
 
 		return bitmap;
 	}
