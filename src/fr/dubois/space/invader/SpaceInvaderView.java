@@ -27,7 +27,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 public class SpaceInvaderView extends View {
-	
+
 	// Dimensions souhaitées
 	private static final int TARGET_HEIGHT = 800;
 	private static final int TARGET_WIDTH = 600;
@@ -52,7 +52,7 @@ public class SpaceInvaderView extends View {
 	}
 
 
-	
+
 
 	void init(){
 		paint = new Paint();
@@ -102,30 +102,31 @@ public class SpaceInvaderView extends View {
 	}
 
 
-/*
+	/*
 private void SpaceInvaderView() {
     setFocusable(true);
 
     Resources r = this.getContext().getResources();
-    
+
     resetTiles(4);
     loadTile(RED_STAR, r.getDrawable(R.drawable.redstar));
     loadTile(YELLOW_STAR, r.getDrawable(R.drawable.yellowstar));
     loadTile(GREEN_STAR, r.getDrawable(R.drawable.greenstar));
-	
-}
-*/
 
-public loadImage(int res) {
 }
-	int x;
-	int y;
-	
-	Resources r = this.getContext().getResources().getDrawable(R.drawable.redstar);
-    Bitmap bitmap = Bitmap.createBitmap(x, y, Bitmap.Config.ARGB_8888);
-    Canvas canvas = new Canvas(bitmap);
-    tile.setBounds(0, 0, x, y);
-    tile.draw(canvas);
-    
-    return bitmap;
+	 */
+
+	public loadImage (int res) {
+
+		int x;
+		int y;
+
+		Resources r = this.getContext().getResources().getDrawable(R.drawable.redstar);
+		Bitmap bitmap = Bitmap.createBitmap(x, y, Bitmap.Config.ARGB_8888);
+		Canvas canvas = new Canvas(bitmap);
+		tile.setBounds(0, 0, x, y);
+		tile.draw(canvas);
+
+		return bitmap;
+	}
 }
