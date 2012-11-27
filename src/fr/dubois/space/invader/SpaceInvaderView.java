@@ -19,7 +19,7 @@ public class SpaceInvaderView extends View {
 	private static final int TARGET_HEIGHT = 800;
 	private static final int TARGET_WIDTH = 600;
 
-	private Bitmap alien;
+	private Bitmap alienBitmap;
 	
 	
 	
@@ -54,7 +54,7 @@ public class SpaceInvaderView extends View {
 		paint.setTextSize(36);
 		paint.setTextAlign(Paint.Align.CENTER);
 		text = "Texte";
-		alien =loadImage(R.drawable.alien1);
+		alienBitmap =loadImage(R.drawable.alien1);
 	}
 
 
