@@ -26,6 +26,7 @@ public class SpaceInvaderView extends View {
 	
 	private Paint paint; // Style pour le texte	
 	private String text; // texte à afficher
+	private Alien alien;
 
 
 	public SpaceInvaderView(Context context) {
