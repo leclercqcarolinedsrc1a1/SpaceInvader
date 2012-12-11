@@ -138,10 +138,17 @@ private void SpaceInvaderView() {
 
 	public void update() {
 		mRedrawHandler.sleep(40);
+		this.act();
 		// TODO Auto-generated method stub
 	}
 	
 	
+	private void act() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 	private RefreshHandler mRedrawHandler = new RefreshHandler();
 	class RefreshHandler extends Handler {
 		
