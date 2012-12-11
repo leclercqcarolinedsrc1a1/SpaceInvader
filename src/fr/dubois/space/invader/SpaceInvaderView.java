@@ -10,6 +10,8 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -55,8 +57,11 @@ public class SpaceInvaderView extends View {
 		paint.setTextSize(36);
 		paint.setTextAlign(Paint.Align.CENTER);
 		text = "Texte";
+		
 		alienBitmap =loadImage(R.drawable.alien1);
 		alien=new Alien(alienBitmap,0,0);
+		
+		this.update();
 	}
 
 
@@ -127,5 +132,29 @@ private void SpaceInvaderView() {
 		drawable.draw(canvas);
 
 		return bitmap;
+	}
+
+
+
+	public void update() {
+		mRedrawHandler.sleep(40);
+		// TODO Auto-generated method stub
+	}
+	
+	
+	private RefreshHandler mRedrawHandler = new RefreshHandler();
+	class RefreshHandler extends Handler {
+		
+	    @Override
+	    public void handleMessage(Message msg) {
+	        SpaceInvaderView.this.update();
+	        SpaceInvaderView.this.invalidate();
+	    }
+	
+	    public void sleep(long delayMillis) {
+	    	this.removeMessages(0);
+	        sendMessageDelayed(obtainMessage(0), delayMillis);
+	    }
+
 	}
 }
