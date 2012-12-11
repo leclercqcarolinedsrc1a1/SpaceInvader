@@ -56,6 +56,7 @@ public class SpaceInvaderView extends View {
 		paint.setTextAlign(Paint.Align.CENTER);
 		text = "Texte";
 		alienBitmap =loadImage(R.drawable.alien1);
+		alien=new Alien(alienBitmap,0,0);
 	}
 
 
